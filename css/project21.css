@@ -1,0 +1,286 @@
+:root{
+    --yellow-color:#ffc800;
+    --yellow-hover : #cca000;
+    --black-color : #212529;
+    --border-color : rgba(0, 0, 0, 0.1);
+    --section-color: #eff7fa;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.up {
+    display: none;
+    background-color: var(--yellow-color);
+    border: 1px solid var(--yellow-color);
+    z-index: 10000;
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    cursor: pointer;
+}
+p.mainP{
+    color: #6c757d;
+    font-weight: 400;
+    font-family: 'Roboto Slab', serif;
+}
+nav.scroll{
+    background-color: var(--black-color);
+    z-index: 999999999;
+}
+.navbar .container img{
+    width: 140px;
+    height: 1.5rem;
+}
+.navbar ul li a{
+    color: rgb(255, 255, 255);
+}
+.navbar ul li a:hover,
+.navbar ul li a:focus{
+    color: #cca000;
+}
+.navbar .navbar-toggler{
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+@media(max-width:991px){
+    .navbar{
+        padding: 20px 0px;
+        background-color: var(--black-color);
+    }
+}
+.total {
+    background-image: url("imgStart/header-bg.jpg");
+    background-size: cover;
+    height:100vh;
+}
+.total .word h3{
+    font-size: 35px;
+}
+.total .word h1{
+    font-size: 55px;
+}
+.total .word a{
+    background-color: var(--yellow-color);
+    text-decoration: none;
+}
+.total .word a:hover{
+    background-color: var(--yellow-hover);
+}
+.ser .row .box .myicon {
+    position: relative;
+    left: 50%;
+    width: 135px;
+    height: 130px;
+    background-color: var(--yellow-color);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.ser .row .box .myicon svg {
+    font-size: 70px;
+}
+.pro {
+    background-color: var(--section-color);
+}
+.pro .box .img{
+    cursor: pointer;
+}
+.pro .box .hov{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 200, 0, 0.9);
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    display: none;
+}
+.pro .box .img:hover .hov{
+    display: flex;
+}
+.abo .row .box .parent{
+    width: 55%;
+    position: relative;
+}
+.abo .row::after{
+    content: "";
+    background-color: #e9ecef;
+    width: 2px;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+}
+.abo .row .box .children {
+    flex-direction: row-reverse;
+    position: relative;
+    left: 52%;
+    transform: translateX(-40%);
+    width: 90%;
+    -webkit-transform: translateX(-40%);
+    -moz-transform: translateX(-40%);
+    -ms-transform: translateX(-40%);
+    -o-transform: translateX(-40%);
+}
+.abo .row .box .childTwo{
+    position: relative;
+    left: 75.5%;
+}
+.abo .row .box .parent .myimg{
+    width: 800px;
+    height: 150px;
+}
+.abo .row .box img{
+    width: 100%;
+    height: auto;
+    border: 7px solid #e9ecef;
+    z-index: 999999;
+}
+.abo .row .box .word {
+    direction: rtl;
+}
+.abo .row .boxText .parentText .mycolor {
+    background-color: var(--yellow-color);
+    width: 150px;
+    height: 150px;
+    border: 7px solid #e9ecef;
+    position: relative;
+    left: 50%;
+    transform: translateX(-49%);
+    -webkit-transform: translateX(-49%);
+    -moz-transform: translateX(-49%);
+    -ms-transform: translateX(-49%);
+    -o-transform: translateX(-49%);
+}
+@media(max-width:991px){
+    .abo .row .box .word {
+        direction: ltr;
+    }
+    .abo .row .box .parent{
+        width: 100%;
+    }
+    .abo .row .box .children {
+        flex-direction: row;
+        width: 100%;
+    }
+    .abo .row .box .childTwo{
+        left: 0%;
+    }
+    .abo .row .box .children,
+    .abo .row .boxText .parentText .mycolor {
+        left: 0%;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+    .abo .row::after{
+        left: 12.5%;
+    }
+    .abo .row .box .parent .myimg{
+        width: 500px;
+        height: 100px;
+    }
+}
+@media(max-width:767px){
+    .abo .row .boxText .parentText .mycolor {
+        width: 90px;
+        height: 90px;
+    }
+    .abo .row .boxText .parentText .mycolor p{
+        padding: 4px;
+        font-size: 12px !important;
+    }
+}
+.team{
+    background-color: var(--section-color);
+}
+.team .row img{
+    width: 14rem;
+    height: 14rem;
+    border: 7px solid #e9ecef;
+}
+.team .row .box a,
+footer .row .box a{
+    padding: 10px 12px !important;
+}
+.team .row .box a.face,
+footer .row .box a.face{
+    padding: 10px 14px !important;
+}
+.team .row .box a:hover,
+footer .row .box a:hover{
+    opacity: 0.8;
+}
+.team .row p.wid{
+    max-width: 800px;
+    margin: auto;
+}
+.page .row .box img{
+    height: 2.75rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.contact {
+    background-color: var(--black-color);
+    background-image: url("imgStart/map-image.png");
+    background-size: cover;
+}
+.contact .row .box input,
+.contact .row .box textarea{
+    outline: none;
+    border: none;
+}
+.contact .row .box input:focus,
+.contact .row .box textarea:focus{
+    border: 1px solid var(--yellow-color);
+}
+.contact .row .box ::placeholder{
+    color: #c3c3c5;
+    font-weight: bold;
+}
+.contact .row .box .send button{
+    background-color: #ffc800;
+    opacity: 0.6;
+}
+@media(max-width:767px){
+    .contact .row .box .chil{
+        flex-direction: column !important;
+    }
+    .contact .row .box .chil .one,
+    .contact .row .box .chil .two{
+        width: 100% !important;
+    }
+    .contact .row .box .chil .two textarea{
+        min-height: 10rem;
+    }
+    .contact .row .box .send {
+        margin-top: 20px !important;
+    }
+}
